@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Rooms</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>All Rooms</h1>
+  <table border="1" cellpadding="10" align="center">
+    <tr>
+      <th>Room No</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Status</th>
+    </tr>
+    {% for room in rooms %}
+    <tr>
+      <td>{{ room[0] }}</td>
+      <td>{{ room[1] }}</td>
+      <td>{{ room[2] }}</td>
+      <td>{{ room[3] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

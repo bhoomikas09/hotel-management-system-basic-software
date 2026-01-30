@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Customers</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Customer Records</h1>
+  <table border="1" cellpadding="10" align="center">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Room No</th>
+      <th>Check-In</th>
+      <th>Check-Out</th>
+      <th>Total Cost</th>
+    </tr>
+    {% for c in customers %}
+    <tr>
+      <td>{{ c[0] }}</td>
+      <td>{{ c[1] }}</td>
+      <td>{{ c[2] }}</td>
+      <td>{{ c[3] }}</td>
+      <td>{{ c[4] }}</td>
+      <td>{{ c[5] }}</td>
+      <td>{{ c[6] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>
